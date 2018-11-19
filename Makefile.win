@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main.o
-LINKOBJ  = main.o
+OBJ      = main.o bingo.o countbingo.o getnumberbycom.o getnumberbyme.o printbingo.o processbingo.o
+LINKOBJ  = main.o bingo.o countbingo.o getnumberbycom.o getnumberbyme.o printbingo.o processbingo.o
 LIBS     = -L"C:/Users/SMPC/Desktop/Dev-Cpp/MinGW64/lib" -L"C:/Users/SMPC/Desktop/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Users/SMPC/Desktop/Dev-Cpp/MinGW64/include" -I"C:/Users/SMPC/Desktop/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Users/SMPC/Desktop/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Users/SMPC/Desktop/Dev-Cpp/MinGW64/include" -I"C:/Users/SMPC/Desktop/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Users/SMPC/Desktop/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Users/SMPC/Desktop/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -26,3 +26,21 @@ $(BIN): $(OBJ)
 
 main.o: main.c
 	$(CC) -c main.c -o main.o $(CFLAGS)
+
+bingo.o: bingo.c
+	$(CC) -c bingo.c -o bingo.o $(CFLAGS)
+
+countbingo.o: countbingo.c
+	$(CC) -c countbingo.c -o countbingo.o $(CFLAGS)
+
+getnumberbycom.o: getnumberbycom.c
+	$(CC) -c getnumberbycom.c -o getnumberbycom.o $(CFLAGS)
+
+getnumberbyme.o: getnumberbyme.c
+	$(CC) -c getnumberbyme.c -o getnumberbyme.o $(CFLAGS)
+
+printbingo.o: printbingo.c
+	$(CC) -c printbingo.c -o printbingo.o $(CFLAGS)
+
+processbingo.o: processbingo.c
+	$(CC) -c processbingo.c -o processbingo.o $(CFLAGS)
