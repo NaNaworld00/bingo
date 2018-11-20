@@ -20,13 +20,13 @@ int process_bingo(int bingo[N][N])
 		if (data>=1 && data<=N*N)
 		{
 			printf("%d번째 공격\n", st);
-			for (i=0; i<5; i++)
+			for (i=0; i<N; i++)
 			{
-				for (j=0; j<5; j++)
+				for (j=0; j<N; j++)
 				{
 					if(bingo[i][j]==data)
 					{
-						bingo[i][j]=-1;
+						bingo[i][j]= -1;
 						break;
 					}
 				}
@@ -38,9 +38,9 @@ int process_bingo(int bingo[N][N])
 			printf("ERROR 재입력\n", st);
 		}
 		count = count_bingo(sum);
-		for (i=0; i<5; i++)
+		for (i=0; i<N; i++)
 		{
-			for (j=0; j<5; j++)
+			for (j=0; j<N; j++)
 			{
 				printf("%7d", bingo[i][j]);
 			}

@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include "bingo.h"
+#include "printbingo.h"
 #define N 5
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
@@ -8,8 +10,11 @@
 int main(int argc, char *argv[]){
 	
 	int bingo[N][N];
+	
 	int mybingo[N][N];
 	int combingo[N][N];
+	
+	srand((unsigned)time(NULL));
 	
 	printf("BINGO 게임방법\n");
 	printf("1. 숫자를 하나 입력하세요.\n");
@@ -19,9 +24,12 @@ int main(int argc, char *argv[]){
 	
 	printf("Are you Ready?\n"); 
 	
-	initiate_bingo(mybingo, combingo);
-	print_bingo(bingo);
-	process_bingo(bingo);
+	initiate_bingo(mybingo);
+	initiate_bingo(combingo);
+	print_bingo(mybingo);
+	print_bingo(combingo);
+	process_bingo(mybingo);
+	process_bingo(combingo);
 	
 	return EXIT_SUCCESS;	
 }

@@ -7,13 +7,10 @@
 
 int initiate_bingo(int bingo[N][N])
 {
-	int i=0, j=0;
-	long seed;
-	int temp[N*N];
+	int i=0;
+	int j=0;
+	int temp[N*N]={0};
 	int tem;
-	
-	seed=time(NULL);
-	srand(seed);
 	
 	for (i=0; i<N; i++)
 	{
@@ -25,24 +22,26 @@ int initiate_bingo(int bingo[N][N])
 	
 	for (i=0; i<N*N; i++)
 	{
-		temp[i]=0;
+		temp[i] = 0;
 	}
 	
 	for (i=0; i<N; i++)
 	{
 		for (j=0; j<N; j++)
-		{
+		{	
 			while (1)
-			{
-				tem = (rand()%N*N)+1;
-				if (temp[tem - 1] == 0)
-				{
+			{ 	
+				tem = rand()%(N*N)+1;
+				if (temp[tem- 1] == 0)
+				{	
 					bingo[i][j] = tem;
-					temp[tem] = 1;
+					temp[tem - 1] = 1;
 					break;
 				}
 			}
 		}
+		
+		
 	}
 	return bingo[N][N];
 }

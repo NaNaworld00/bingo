@@ -3,4 +3,4 @@
 #include <time.h>
 #define N 5
 
-int print_bingo(int bingo[N][N]);
+int print_bingo(int bingo2[N][N]);
